@@ -1,6 +1,6 @@
 #! /bin/bash
 UCF_FORCE_CONFOLD=1 DEBIAN_FRONTEND=noninteractive
-alias apt=apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -qq -y
+alias apt='apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -qq -y'
 apt update
 apt upgrade
 apt install software-properties-common
