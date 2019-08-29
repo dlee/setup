@@ -1,14 +1,12 @@
 #! /bin/bash
-UCF_FORCE_CONFOLD=1 DEBIAN_FRONTEND=noninteractive
-APT='apt -y'
-$APT update
-$APT upgrade
-$APT install software-properties-common
+
+apt update
+apt -y install software-properties-common
 add-apt-repository -y ppa:keithw/mosh
 add-apt-repository -y ppa:neovim-ppa/stable
 add-apt-repository -y -r ppa:chris-lea/node.js
-$APT update
-$APT install curl git build-essential nodejs fasd neovim mosh zsh tmux
+apt -y update
+apt -y install curl git build-essential nodejs fasd neovim mosh zsh tmux
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
 dpkg -i ripgrep_11.0.2_amd64.deb
 echo "Changing shell to ZSH"
