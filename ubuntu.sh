@@ -1,14 +1,14 @@
 #! /bin/bash
 UCF_FORCE_CONFOLD=1 DEBIAN_FRONTEND=noninteractive
-alias apt='apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -qq -y'
-apt update
-apt upgrade
-apt install software-properties-common
+APT='apt -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -qq -y'
+$APT update
+$APT upgrade
+$APT install software-properties-common
 add-apt-repository -y ppa:keithw/mosh
 add-apt-repository -y ppa:neovim-ppa/stable
 add-apt-repository -y -r ppa:chris-lea/node.js
-apt update
-apt install curl git build-essential nodejs fasd neovim mosh zsh tmux
+$APT update
+$APT install curl git build-essential nodejs fasd neovim mosh zsh tmux
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
 dpkg -i ripgrep_11.0.2_amd64.deb
 echo "Changing shell to ZSH"
