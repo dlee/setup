@@ -7,6 +7,7 @@ add-apt-repository ppa:neovim-ppa/stable
 curl -sL https://deb.nodesource.com/setup_12.x | bash -
 apt update
 apt install -y git build-essential nodejs fasd neovim mosh zsh tmux
+chsh -s /usr/bin/zsh
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
 dpkg -i ripgrep_11.0.2_amd64.deb
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
