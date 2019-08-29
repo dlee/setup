@@ -1,5 +1,6 @@
 #! /bin/bash
-APT='apt -qq -y'
+UCF_FORCE_CONFOLD=1 DEBIAN_FRONTEND=noninteractive
+APT='apt -y'
 $APT update
 $APT upgrade
 $APT install software-properties-common
