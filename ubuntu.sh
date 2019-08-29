@@ -10,6 +10,7 @@ apt -y update
 apt -y install curl git build-essential nodejs fasd neovim mosh zsh tmux
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
 dpkg -i ripgrep_11.0.2_amd64.deb
+locale-gen en_US.UTF-8
 echo "Changing shell to ZSH"
 [ -f /usr/bin/zsh ] && chsh -s /usr/bin/zsh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
