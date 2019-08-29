@@ -13,7 +13,7 @@ dpkg -i ripgrep_11.0.2_amd64.deb
 echo "Changing shell to ZSH"
 [ -f /usr/bin/zsh ] && chsh -s /usr/bin/zsh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --bin
+~/.fzf/install --all
 [ ! -f ~/.ssh/id_rsa.pub ] && cat /dev/zero | ssh-keygen -q -N ""
 unset GITHUB_OTP
 read -p "Enter Github OTP: " GITHUB_OTP
