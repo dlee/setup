@@ -1,7 +1,7 @@
 #! /bin/bash
 
 apt update
-apt upgrade
+apt -y upgrade
 apt -y install software-properties-common
 add-apt-repository -y ppa:keithw/mosh
 add-apt-repository -y ppa:neovim-ppa/stable
